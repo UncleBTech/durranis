@@ -1,4 +1,5 @@
 import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 
 function NotFoundComponent() {
   return (
@@ -22,7 +23,32 @@ function NotFoundComponent() {
   );
 }
 
+function RootComponent() {
+  return (
+    <>
+      <Helmet>
+        <title>
+          Durrani's Gold & Diamonds — Bradford's Premier Jewellery & Luxury Watch Showroom
+        </title>
+        <meta
+          name="description"
+          content="50 years of artisan craftsmanship from Dubai to Bradford. IGI-certified diamonds, bespoke bridal sets and the world's most coveted luxury watches at 839 Leeds Road, Bradford."
+        />
+        <meta name="author" content="Durrani's Gold & Diamonds" />
+        <meta property="og:title" content="Durrani's Gold & Diamonds — Bradford" />
+        <meta
+          property="og:description"
+          content="Heritage Asian jewellery, IGI-certified diamonds and luxury timepieces in Bradford's most palatial showroom."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <Outlet />
+    </>
+  );
+}
+
 export const Route = createRootRoute({
-  component: () => <Outlet />,
+  component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
