@@ -29,14 +29,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Durrani's Gold & Diamonds — Bradford's Premier Jewellery & Luxury Watch Showroom" },
+      {
+        name: "description",
+        content:
+          "50 years of artisan craftsmanship from Dubai to Bradford. IGI-certified diamonds, bespoke bridal sets and the world's most coveted luxury watches at 839 Leeds Road, Bradford.",
+      },
+      { name: "author", content: "Durrani's Gold & Diamonds" },
+      { property: "og:title", content: "Durrani's Gold & Diamonds — Bradford" },
+      {
+        property: "og:description",
+        content:
+          "Heritage Asian jewellery, IGI-certified diamonds and luxury timepieces in Bradford's most palatial showroom.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
