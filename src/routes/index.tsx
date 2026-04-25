@@ -120,7 +120,7 @@ function Hero() {
           className="animate-fade-in text-xs uppercase tracking-[0.4em] text-gold"
           style={{ animationDelay: "0.2s" }}
         >
-          Bradford&rsquo;s Finest Jewellery &amp; Luxury Watch Showroom
+          Bradford&rsquo;s Finest Jewelry &amp; Luxury Watch Showroom
         </p>
 
         <h1 className="mt-8 font-display text-[52px] font-light leading-[1.05] text-foreground sm:text-7xl lg:text-[96px]">
