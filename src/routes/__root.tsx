@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -25,52 +23,6 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Durrani's Gold & Diamonds — Bradford's Premier Jewellery & Luxury Watch Showroom" },
-      {
-        name: "description",
-        content:
-          "50 years of artisan craftsmanship from Dubai to Bradford. IGI-certified diamonds, bespoke bridal sets and the world's most coveted luxury watches at 839 Leeds Road, Bradford.",
-      },
-      { name: "author", content: "Durrani's Gold & Diamonds" },
-      { property: "og:title", content: "Durrani's Gold & Diamonds — Bradford" },
-      {
-        property: "og:description",
-        content:
-          "Heritage Asian jewellery, IGI-certified diamonds and luxury timepieces in Bradford's most palatial showroom.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
+  component: () => <Outlet />,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
-function RootComponent() {
-  return <Outlet />;
-}
