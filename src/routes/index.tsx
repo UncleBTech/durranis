@@ -131,7 +131,7 @@ function Hero() {
             className="block animate-fade-up italic text-shimmer"
             style={{ animationDelay: "0.7s" }}
           >
-            Meets Diamonds.
+            Meets Faisal.
           </span>
         </h1>
 
