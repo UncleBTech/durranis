@@ -125,7 +125,7 @@ function Hero() {
 
         <h1 className="mt-8 font-display text-[52px] font-light leading-[1.05] text-foreground sm:text-7xl lg:text-[96px]">
           <span className="block animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            Where Heritage
+            Where Gemini
           </span>
           <span
             className="block animate-fade-up italic text-shimmer"
